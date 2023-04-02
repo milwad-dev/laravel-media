@@ -10,8 +10,10 @@
     },
     "authors": [
         {
-            "name": "miladev-ent",
-            "email": "milwad.dev@gmail.com"
+            "name": "milwad-dev",
+            "email": "milwad.dev@gmail.com",
+            "role": "Owner",
+            "homepage": "https://github.com/milwad-dev"
         }
     ],
     "require": {}
