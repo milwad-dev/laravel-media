@@ -1,20 +1,40 @@
 {
     "name": "milwad/laravel-media",
     "description": "Upload your media very easy",
+    "keywords": ["laravel", "php", "composer", "laravel-media", "milwad", "laravel-media-uploader"],
+    "minimum-stability": "dev",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "milwad-dev",
+            "email": "milwad.dev@gmail.com",
+            "role": "owner",
+            "homepage": "https://github.com/milwad-dev"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Milwad\\LaravelMedia\\LaravelMediaServiceProvider"
+            ]
+        }
+    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "Milwad\\LaravelMedia\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "milwad-dev",
-            "email": "milwad.dev@gmail.com",
-            "role": "Owner",
-            "homepage": "https://github.com/milwad-dev"
+    "autoload-dev": {
+        "psr-4": {
+            "Milwad\\LaravelMedia\\Tests\\": "tests/"
         }
-    ],
-    "require": {}
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
 }
