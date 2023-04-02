@@ -1,0 +1,18 @@
+{
+    "name": "milwad/laravel-media",
+    "description": "Upload your media very easy",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Milwad\\LaravelMedia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "miladev-ent",
+            "email": "milwad.dev@gmail.com"
+        }
+    ],
+    "require": {}
+}
