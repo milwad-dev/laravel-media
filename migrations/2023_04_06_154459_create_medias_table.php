@@ -14,10 +14,11 @@ return new class extends Migration
     {
         Schema::create('medias', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', get_enum_values(MediaTypeEnum::cases()));
-            $table->boolean('is_private');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->string('filename');
             $table->text('path');
+            $table->boolean('is_private');
+            $table->enum('type', get_enum_values(MediaTypeEnum::cases()));
             $table->timestamps();
         });
     }
