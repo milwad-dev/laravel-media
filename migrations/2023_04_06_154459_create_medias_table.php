@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('filename');
             $table->text('path');
             $table->boolean('is_private');
+            $table->json('files');
             $table->enum('type', get_enum_values(MediaTypeEnum::cases()));
             $table->timestamps();
         });
