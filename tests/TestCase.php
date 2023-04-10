@@ -2,8 +2,15 @@
 
 namespace Milwad\LaravelMedia\Tests;
 
-class TestCase
+use Milwad\LaravelMedia\LaravelMediaServiceProvider;
+use Orchestra\Testbench\TestCase as BaseTestCase;
+
+class TestCase extends BaseTestCase
 {
-
-
+    protected function getPackageProviders($app)
+    {
+        return [
+            LaravelMediaServiceProvider::class,
+        ];
+    }
 }
