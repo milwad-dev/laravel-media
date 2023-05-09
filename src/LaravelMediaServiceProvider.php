@@ -3,6 +3,7 @@
 namespace Milwad\LaravelMedia;
 
 use Illuminate\Support\ServiceProvider;
+use Milwad\LaravelMedia\Services\ImageService;
 
 class LaravelMediaServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,8 @@ class LaravelMediaServiceProvider extends ServiceProvider
 
     public function boot()
     {
-
+        $this->app->bind('image-service', function () {
+            return new ImageService;
+        });
     }
 }
